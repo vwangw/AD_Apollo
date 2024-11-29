@@ -15,7 +15,7 @@ export const resolvers = {
             if (destination) {
                 flightsModel.destination = destination;
             }
-            const flightModel = await context.FlightsCollection.find().toArray();
+            const flightModel = await context.FlightsCollection.find(flightsModel).toArray();
             return flightModel.map((flightModel) =>
                 fromModelToFlight(flightModel));
         },

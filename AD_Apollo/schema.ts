@@ -8,8 +8,8 @@ type Flight {
 }
 
 type Query {
-    flights: Flight[]!
-    flight(id: ID!): Flight
+    getFlights: [Flight!]!
+    getFlight(id: ID!): Flight
 }
 
 type Mutation {
